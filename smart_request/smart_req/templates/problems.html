@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% block content %}
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Список проблем</h1>
+            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                    class="fas fa-download fa-sm text-white-50"></i> Создать отчет</a>
+        </div>
+
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <span class="badge badge-danger float-right">Не рассмотрена</span>
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                            Отсутствие горячей воды по адресу г.Курск, ул.50 лет Октября, 44
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <table class="table table-bordered table-striped table-hover">
+                            <th>Автор</th>
+                            <th>Время</th>
+                            <tr>
+                                <td>Васильев Иван Петрович</td>
+                                <td>21.07.2019 12:03</td>
+                            </tr>
+                            <tr>
+                                <td>Лебедев Устин Платонович</td>
+                                <td>21.07.2019 15:21</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <p>
+                            <span class="badge badge-warning float-right">Отправлена на обработку в ТСЖ</span>
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                    aria-expanded="false" aria-controls="collapseTwo">
+                                Аварийное жильё по адресу г.Курск, ул. Энгельса 120
+                            </button>
+                        </p>
+
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        <table class="table table-bordered table-striped table-hover">
+                            <th>Автор</th>
+                            <th>Время</th>
+                            <tr>
+                                <td>Агафонов Роберт Фёдорович</td>
+                                <td>18.07.2019 21:17</td>
+                            </tr>
+                            <tr>
+                                <td>Денисова Алиса Романовна</td>
+                                <td>21.07.2019 18:13</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <span class="badge badge-success float-right">Завершена</span>
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                                aria-expanded="false" aria-controls="collapseThree">
+                            Неисправный лифт в многоквартирном доме по адресу г.Курск, ул. Абрикосовая 5
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        <table class="table table-bordered table-striped table-hover">
+                            <th>Автор</th>
+                            <th>Время</th>
+                            <tr>
+                                <td>Васильев Иван Петрович</td>
+                                <td>21.07.2019 12:03</td>
+                            </tr>
+                            <tr>
+                                <td>Лебедев Устин Платонович</td>
+                                <td>21.07.2019 15:21</td>
+                            </tr>
+                        </table>
+                        <div class="text-center">
+                            <button class="btn btn-success float-center">Отправить ответы на заявки</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+{% endblock %}
+{% block scripts %}
+    <script type="text/javascript" src="/static/js/jquery.treegrid.min.js"></script>
+    <link rel="stylesheet" href="/static/css/jquery.treegrid.css">
+
+    <script type="text/javascript">
+        $('.tree').treegrid();
+    </script>
+{% endblock %}
