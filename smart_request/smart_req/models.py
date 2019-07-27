@@ -15,8 +15,9 @@ class UserReq(models.Model):
         return self.surname + " " + self.name + " " + self.patronymic
 
 
+
 class ManagingOrganization(models.Model):
-    id = models.IntegerField(u"ID Управляющей организации на Портале", null=True, blank=True)
+    _id = models.IntegerField(u"ID Управляющей организации на Портале", null=True, blank=True)
     subject_rf = models.CharField(u"Субъект РФ", max_length=200, default="")
     name_full = models.CharField(u"Фирменное наименование юр лица", max_length=200, default="")
     name_short = models.CharField(u"Сокращенное наименование", max_length=200, default="")
@@ -37,7 +38,7 @@ class ManagingOrganization(models.Model):
 
 
 class SubjectStructure(models.Model):
-    id = models.IntegerField(u"ID дома на Портале", null=True, blank=True)
+    _id = models.IntegerField(u"ID дома на Портале", null=True, blank=True)
     region_id = models.IntegerField(u"Субъект РФ (код ФИАС)", null=True, blank=True)
     area_id = models.IntegerField(u"Район (код ФИАС)", null=True, blank=True)
     city_id = models.IntegerField(u"Населенный пункт (код ФИАС)", null=True, blank=True)

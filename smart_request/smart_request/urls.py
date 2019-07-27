@@ -18,9 +18,14 @@ from django.urls import path
 from django.conf.urls import url
 from smart_req import rest_views
 
+from smart_req import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^cats/$', view=rest_views.CategoryReqListView.as_view(), name="categories_list"),
     url(r'^cats/(?P<cat_id>\d+)/$', view=rest_views.CategoryReqView.as_view(), name="categories_children_list"),
     url(r'^req/', view=rest_views.ReqCreateView.as_view(), name="req_post"),
+    path('requests/', views.get_requests),
+    path('problems/', views.get_problems),
+    path('templates/', views.get_templates)
 ]

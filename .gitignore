@@ -5,3 +5,5 @@ smart_request/venv/*
 .idea/modules.xml
 .idea/SmartRequest.iml
 .idea/workspace.xml
+venv/*
+.idea/*
