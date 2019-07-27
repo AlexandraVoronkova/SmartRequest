@@ -4,9 +4,6 @@ from django.contrib.auth.models import User
 
 class UserReq(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    name = models.CharField(u"Имя", max_length=200, default="")
-    email = models.CharField(u"Почта", max_length=200, default="")
-    phone = models.CharField(u"Номер телефона", max_length=200, default="")
     surname = models.CharField(u"Фамилия",max_length=200, default="")
     name = models.CharField(u"Имя",max_length=200, default="")
     patronymic = models.CharField(u"Отчество",max_length=200, default="")
