@@ -1,0 +1,3 @@
+smart_request/.idea/*
+*.pyc
+smart_request/venv/*
