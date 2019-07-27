@@ -20,5 +20,7 @@ from smart_req import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.get_base)
+    path('requests/', views.get_requests),
+    path('problems/', views.get_problems),
+    path('templates/', views.get_templates)
 ]

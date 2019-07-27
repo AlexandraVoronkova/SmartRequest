@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %}
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Редактор шаблонов ответа</h1>
+            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                    class="fas fa-plus fa-sm text-white-50"></i> Новый шаблон</a>
+        </div>
+
+        <!-- Content Row -->
+        <div class="row">
+            <select class="from-control"></select>
+            <table class="tree table col-xs-12">
+                <th class="col-xs-4">Категория</th>
+                <th class="col-xs-4">Автор</th>
+                <th class="col-xs-2">Статус</th>
+                <th class="col-xs-2">Дата</th>
+                <th></th>
+                <tr class="treegrid-1">
+                    <td>Многоквартирные дома</td>
+                </tr>
+                <tr class="treegrid-3 treegrid-parent-1">
+                    <td>Придомовая территория</td>
+                </tr>
+                <tr class="treegrid-4 treegrid-parent-3">
+                    <td>Некачественная уборка снега</td>
+                    <td>Сидоров Николай Петрович</td>
+                    <td>На расмотрении</td>
+                    <td>21.04.2019</td>
+                    <th><input type="checkbox"></th>
+                </tr>
+                <tr class="treegrid-4 treegrid-parent-3">
+                    <td>Node 1-2-1</td>
+                    <td>Additional info</td>
+                </tr>
+                <tr class="treegrid-2">
+                    <td>Частный сектор</td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+    <!-- /.container-fluid -->
+{% endblock %}
+{% block scripts %}
+    <script type="text/javascript" src="/static/js/jquery.treegrid.min.js"></script>
+    <link rel="stylesheet" href="/static/css/jquery.treegrid.css">
+
+    <script type="text/javascript">
+        $('.tree').treegrid();
+    </script>
+{% endblock %}
