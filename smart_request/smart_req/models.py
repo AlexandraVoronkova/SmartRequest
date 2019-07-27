@@ -12,7 +12,7 @@ class UserReq(models.Model):
     address = models.CharField(u"Адрес", max_length=200, default="")
 
     def __str__(self):
-        return self.lname + " " + self.fname + " " + self.sname
+        return self.surname + " " + self.name + " " + self.patronymic
 
 
 class ManagingOrganization(models.Model):
@@ -69,6 +69,9 @@ class SubjectStructure(models.Model):
 class CategoryReq(models.Model):
     name = models.CharField(u'Наименование категории', max_length=200, null=True, blank=True)
     parent = models.ForeignKey('self', verbose_name=u"Подкатегория", blank=True, null=True, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
 
 
 class Request(models.Model):
