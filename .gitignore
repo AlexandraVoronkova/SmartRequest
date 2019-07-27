@@ -1,3 +1,9 @@
 smart_request/.idea/*
 *.pyc
 smart_request/venv/*
+.idea/misc.xml
+.idea/modules.xml
+.idea/SmartRequest.iml
+.idea/workspace.xml
+venv/*
+.idea/*
