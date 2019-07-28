@@ -5,7 +5,7 @@
 
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Список заявок</h1>
+            <h1 class="h3 mb-0 text-gray-800">Список обращений</h1>
             <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                     class="fas fa-download fa-sm text-white-50"></i> Создать отчет</a>
         </div>
@@ -39,20 +39,23 @@
                     <td>21.04.2019</td>
                     <th><input type="checkbox"></th>
                 </tr>
-                <tr class="treegrid-5 treegrid-parent-3">
-                    <td>Node 1-2-1</td>
-                    <td>Additional info</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr class="treegrid-6 treegrid-parent-3" ondblclick="return location.href = '46645'" style="cursor: pointer">
+                <tr class="treegrid-6 treegrid-parent-3" ondblclick="return location.href = '46645'"
+                    style="cursor: pointer">
                     <td>Содержание детских и спортивных площадок</td>
                     <td>Иванова Ирина Петровна</td>
                     <td>В обработке</td>
                     <td>11.07.2019</td>
                     <td><input type="checkbox"></td>
                 </tr>
+                {% if req %}
+                <tr class="treegrid-t{{ req.id }} treegrid-parent-{{ req.cat.parent.id }}">
+                    <td>{{ req.cat }}</td>
+                    <td>{{ req.user_req }}</td>
+                    <td>{{ req.get_status_display }}</td>
+                    <td>{{ req.date_req|date:"d.m.Y" }}</td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                {% endif %}
                 <tr class="treegrid-2">
                     <td>Частный сектор</td>
                     <td></td>
