@@ -18,3 +18,7 @@ def get_problems(request):
 
 def get_templates(request):
     return render(request, 'response_pattern.html')
+
+
+def edit_template(request, template_id):
+    return render(request, 'pattern.html')
