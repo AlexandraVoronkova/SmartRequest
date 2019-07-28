@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<declare-styleable name="HorizontallyTitledValue">
+		<attr name="htv_title" format="string" />
+		<attr name="htv_value" format="string" />
+	</declare-styleable>
+</resources>

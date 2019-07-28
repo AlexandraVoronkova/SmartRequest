@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/tv_message"
+	style="@style/SmallRegularWhite"
+	android:layout_width="match_parent"
+	android:paddingLeft="@dimen/content_horizontal_padding"
+	android:paddingRight="@dimen/content_horizontal_padding"
+	android:paddingTop="@dimen/content_vertical_padding"
+	android:paddingBottom="@dimen/content_vertical_padding"
+	android:gravity="center"
+	android:minHeight="44dp"
+	tools:textColor="@color/white">
+
+
+</TextView>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<TextView
+		android:id="@+id/tv_title"
+		style="@style/NormalBoldCharcoal"
+		android:labelFor="@id/et_text"
+		android:letterSpacing="@dimen/narrow_letter_spacing"
+		tools:text="Title"/>
+
+	<EditText
+		android:id="@+id/et_text"
+		style="@style/xLargeLightCharcoal"
+		android:layout_width="match_parent"
+		android:layout_marginTop="4dp"
+		android:background="@color/transparent"
+		android:inputType="text"
+		android:textColorHint="@color/charcoal_50_percent_transparent"
+		android:letterSpacing="@dimen/narrow_letter_spacing"
+		android:maxLines="1"
+		android:singleLine="true"
+		tools:text="Value"/>
+
+</merge>

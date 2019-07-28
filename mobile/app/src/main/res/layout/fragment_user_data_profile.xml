@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <FrameLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/content_horizontal_padding"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="@dimen/content_horizontal_padding"
+                    android:orientation="vertical"
+                    android:paddingBottom="24dp">
+
+                    <com.smartrequest.ui.widget.UnderlinedTitledInput
+                        android:id="@+id/uti_name"
+                        style="@style/UnderlinedTextInput"
+                        android:layout_marginTop="5dp"
+                        android:imeOptions="actionNext"
+                        android:inputType="text|textCapWords"
+                        app:uti_hint="@string/edit_parent_profile_screen_name_hint"
+                        app:uti_title="@string/edit_parent_profile_screen_fio_title" />
+
+                    <com.smartrequest.ui.widget.UnderlinedTitledInput
+                        android:id="@+id/uti_address"
+                        style="@style/UnderlinedTextInput"
+                        android:layout_marginTop="5dp"
+                        android:imeOptions="actionNext"
+                        android:inputType="text|textCapWords"
+                        app:uti_hint="@string/edit_parent_profile_screen_address_hint"
+                        app:uti_title="@string/edit_parent_profile_screen_address_title" />
+
+                    <com.smartrequest.ui.widget.UnderlinedTitledInput
+                        android:id="@+id/uti_email"
+                        style="@style/UnderlinedTextInput"
+                        android:layout_marginTop="5dp"
+                        android:imeOptions="actionNext"
+                        android:inputType="text|textEmailAddress"
+                        app:uti_hint="@string/edit_parent_profile_screen_email_hint"
+                        app:uti_title="@string/edit_parent_profile_screen_email_title" />
+
+                    <com.smartrequest.ui.widget.UnderlinedTitledInput
+                        android:id="@+id/uti_phone_number"
+                        style="@style/UnderlinedTextInput"
+                        android:layout_marginTop="5dp"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        app:uti_hint="@string/common_text_input_phone_number_hint"
+                        app:uti_title="@string/edit_parent_profile_screen_phone_number_title" />
+
+                    <TextView
+                        android:id="@+id/btn_logout"
+                        style="@style/PrimaryButton"
+                        android:layout_marginTop="24dp"
+                        android:text="@string/parent_profile_settings_screen_logout" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </FrameLayout>
+
+</LinearLayout>

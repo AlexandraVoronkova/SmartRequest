@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<include layout="@layout/toolbar" />
+
+	<FrameLayout
+		android:id="@+id/content_container"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<ScrollView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:fillViewport="true"
+			android:scrollbars="none">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:clipToPadding="false"
+				android:orientation="vertical"
+				android:gravity="center_horizontal"
+				android:paddingLeft="@dimen/auth_screen_horizontal_padding"
+				android:paddingRight="@dimen/auth_screen_horizontal_padding">
+
+				<TextView
+					android:id="@+id/tv_auth_text"
+					style="@style/NormalLightBoulder"
+					android:layout_marginTop="10dp"
+					android:lineSpacingExtra="5dp"
+					android:text="@string/login_screen_auth_text" />
+
+				<com.smartrequest.ui.widget.TitledInput
+					android:id="@+id/ti_email"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="28dp"
+					android:imeOptions="actionNext"
+					android:inputType="text|textEmailAddress"
+					app:hint="@string/login_screen_email_hint"
+					app:title="@string/login_screen_email_title"
+					tools:layout_height="48dp" />
+
+				<com.smartrequest.ui.widget.TitledInput
+					android:id="@+id/ti_password"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="19dp"
+					android:imeOptions="actionDone"
+					android:inputType="text|textPassword"
+					app:hint="@string/login_screen_password_hint"
+					app:title="@string/login_screen_password_title"
+					tools:layout_height="40dp"
+					tools:layout_width="match_parent" />
+
+				<TextView
+					android:id="@+id/btn_authorization"
+					style="@style/PrimaryButton"
+					android:layout_marginTop="24dp"
+					android:text="@string/login_screen_login" />
+
+				<View
+					android:id="@+id/spacer"
+					android:layout_width="match_parent"
+					android:layout_height="0dp"
+					android:layout_weight="1"
+					android:layout_marginBottom="8dp"
+					android:layout_marginTop="8dp"/>
+
+				<TextView
+					android:id="@+id/btn_registration"
+					style="@style/NormalRegularCharcoal"
+					android:layout_width="match_parent"
+					android:layout_marginBottom="24dp"
+					android:layout_marginTop="24dp"
+					android:gravity="center_horizontal"
+					android:text="@string/login_screen_register"
+					android:textColorLink="@color/blue" />
+
+
+			</LinearLayout>
+
+		</ScrollView>
+
+	</FrameLayout>
+
+
+</LinearLayout>

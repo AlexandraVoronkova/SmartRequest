@@ -1,0 +1,41 @@
+{
+  "project_info": {
+    "project_number": "56653735277",
+    "project_id": "smart-request",
+    "storage_bucket": "smart-request.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:56653735277:android:c48f14b32c2b3b13",
+        "android_client_info": {
+          "package_name": "com.smartrequest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "56653735277-pim9f6cdar2p79es7uu9s9ubf3uq7tjs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEfvh80m730otodTQvjBEybJ1pZjFKOwI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

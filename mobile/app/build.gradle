@@ -1,0 +1,160 @@
+buildscript {
+	repositories {
+		jcenter()
+		maven { url 'https://maven.fabric.io/public' }
+	}
+
+	dependencies {
+		classpath 'io.fabric.tools:gradle:1.+'
+	}
+}
+
+repositories {
+	maven { url 'https://maven.fabric.io/public' }
+}
+
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'io.fabric'
+
+
+android {
+	compileSdkVersion 28
+	defaultConfig {
+		applicationId "com.smartrequest"
+		minSdkVersion rootProject.ext.minSdkVersion
+		targetSdkVersion rootProject.ext.targetSdkVersion
+		versionCode 1
+		versionName "1.0.1"
+		vectorDrawables.useSupportLibrary = true
+		multiDexEnabled true
+		testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+	}
+
+	sourceSets {
+		main.java.srcDirs += files('build/generated/source/kapt/main', 'build/generated/source/kaptKotlin/main')
+		main.java.srcDirs += 'src/main/kotlin'
+	}
+
+	compileOptions {
+		sourceCompatibility JavaVersion.VERSION_1_8
+		targetCompatibility JavaVersion.VERSION_1_8
+	}
+
+	buildTypes {
+		debug {
+			signingConfig null
+			// Uses new built-in shrinker http://tools.android.com/tech-docs/new-build-system/built-in-shrinker
+			useProguard false
+			minifyEnabled true
+			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+			testProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguardTest-rules.pro'
+		}
+
+		release {
+			minifyEnabled true
+			useProguard false
+			debuggable false
+			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+			testProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguardTest-rules.pro'
+		}
+	}
+
+	signingConfigs {
+		release {
+			storeFile file('./keystore/app_keystore.jks')
+			storePassword 'password1'
+			keyAlias 'smart_request'
+			keyPassword 'password2'
+		}
+	}
+
+	flavorDimensions "app"
+
+	productFlavors {
+
+		dev {
+			applicationIdSuffix ".dev"
+			dimension "app"
+			signingConfig signingConfigs.release
+
+		}
+
+		prod {
+			dimension "app"
+			signingConfig signingConfigs.release
+		}
+	}
+
+}
+
+dependencies {
+	implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+	implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+	implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+	implementation "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
+	implementation "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+	implementation "com.android.support:design:$rootProject.supportLibraryVersion"
+	implementation "com.android.support:support-annotations:$rootProject.supportLibraryVersion"
+	implementation "com.android.support:support-vector-drawable:$rootProject.supportLibraryVersion"
+	implementation "com.android.support.constraint:constraint-layout:$rootProject.constraintLayoutVersion"
+	implementation "com.android.support:multidex:1.0.3"
+
+	implementation 'com.google.android.gms:play-services-location:16.0.0'
+
+	implementation "android.arch.lifecycle:extensions:$project.archLifecycleVersion"
+	kapt "android.arch.lifecycle:compiler:$project.archLifecycleVersion"
+
+	implementation "com.squareup.okhttp3:okhttp:$rootProject.okhttpVersion"
+	implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.okhttpVersion"
+	debugImplementation 'com.readystatesoftware.chuck:library:1.1.0'
+	releaseImplementation 'com.readystatesoftware.chuck:library-no-op:1.1.0'
+	implementation "com.jakewharton.timber:timber:$rootProject.timberVersion"
+
+	implementation "com.fasterxml.jackson.core:jackson-core:$rootProject.fasterxmlJacksonVersion"
+	implementation "com.fasterxml.jackson.core:jackson-annotations:$rootProject.fasterxmlJacksonVersion"
+	implementation "com.fasterxml.jackson.core:jackson-databind:$rootProject.fasterxmlJacksonVersion"
+	implementation "com.fasterxml.jackson.module:jackson-module-kotlin:$rootProject.fasterxmlJacksonVersion"
+
+	implementation "com.google.dagger:dagger-android:$rootProject.daggerVersion"
+	implementation "com.google.dagger:dagger-android-support:$rootProject.daggerVersion"
+	kapt "com.google.dagger:dagger-compiler:$rootProject.daggerVersion"
+
+	implementation "com.arello-mobile:moxy-app-compat:$rootProject.moxyVersion"
+	kapt "com.arello-mobile:moxy-compiler:$rootProject.moxyVersion"
+
+	implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxJavaVersion"
+	implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroidVersion"
+
+	implementation "com.hannesdorfmann:adapterdelegates3:3.0.1"
+
+	implementation("com.crashlytics.sdk.android:crashlytics:$rootProject.crashlyticsVersion@aar") {
+		transitive = true
+	}
+
+	implementation "pub.devrel:easypermissions:2.0.0"
+	implementation "com.github.yandextaxitech:binaryprefs:1.0.0"
+	implementation "com.github.smileman:up-screen-message:develop-SNAPSHOT"
+	implementation 'com.redmadrobot:inputmask:3.4.4'
+
+	//Navigation
+	implementation 'ru.terrakok.cicerone:cicerone:3.0.0' //https://github.com/terrakok/Cicerone
+
+	//Parceler
+	implementation "org.parceler:parceler-api:$rootProject.parcelerVersion" //https://github.com/johncarl81/parceler
+	kapt "org.parceler:parceler:$rootProject.parcelerVersion"
+
+	testImplementation "junit:junit:$rootProject.junitVersion"
+	androidTestImplementation 'com.android.support.test:runner:1.0.2'
+	androidTestImplementation("com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion", {
+		exclude group: "com.android.support', module: 'support-annotations"
+	})
+}
+
+apply plugin: 'com.google.gms.google-services'

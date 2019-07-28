@@ -1,0 +1,116 @@
+<resources>
+	<string name="app_name">Smart request</string>
+	<string name="dadata_api">c3a3aaf204282902e34ceefe841651212037be36</string>
+
+	<!-- General string -->
+	<string name="error_message_network_unavailable_check_internet_connection">Ошибка интернет-соединения!</string>
+	<string name="error_message_internal_error_occurred_try_again_later">Произошла внутренняя ошибка. Повторите попытку позже.</string>
+	<string name="stub_fragment_text">Этот функционал еще не реализован</string>
+	<string name="common_add_button_text">Добавить</string>
+
+	<!-- Screen titles -->
+	<string name="screen_title_authorization">Авторизация</string>
+	<string name="screen_title_edit_user_data">Мои данные</string>
+	<string name="screen_title_registration">Регистрация</string>
+	<string name="screen_title_call">Обращение</string>
+	<string name="screen_title_category_list">Выбор категории</string>
+	<string name="screen_title_description">Формулировка проблемы</string>
+	<string name="screen_title_request_list">Список обращений</string>
+	<string name="screen_title_address_list">Выбор адреса</string>
+
+	<!-- Auth options -->
+	<string name="auth_screen_register">Зарегистрироваться</string>
+	<string name="auth_screen_login">Войти</string>
+
+	<!-- Login screen -->
+	<string name="login_screen_auth_text">Введите e-mail и пароль, которые Вы указали при регистрации</string>
+	<string name="login_screen_email_title">E-mail</string>
+	<string name="login_screen_email_hint">Ваш e-mail</string>
+	<string name="login_screen_password_title">Пароль</string>
+	<string name="login_screen_password_hint">Введите пароль</string>
+	<string name="login_screen_login">Войти</string>
+	<string name="login_screen_register">У Вас еще нет аккаунта? Зарегистрируйтесь</string>
+	<string name="login_screen_register_link_part">Зарегистрируйтесь</string>
+
+	<!-- Registration screen -->
+	<string name="registration_screen_name_title">Имя пользователя</string>
+	<string name="registration_screen_name_hint">Например, Иван</string>
+	<string name="registration_screen_email_title">E-mail</string>
+	<string name="registration_screen_email_hint">ivan@mail.ru</string>
+	<string name="registration_screen_password_title">Пароль</string>
+	<string name="registration_screen_password_hint">Введите пароль</string>
+
+	<string name="registration_screen_address_title">Адрес</string>
+	<string name="registration_screen_address_hint">Введите адрес</string>
+	<string name="registration_screen_register">Зарегистрироваться</string>
+	<string name="registration_screen_login">У Вас уже есть аккаунт? Авторизуйтесь</string>
+	<string name="registration_screen_login_link_part">Авторизуйтесь</string>
+
+
+	<!-- Gender selector screen -->
+	<string name="gender_selector_screen_title">Выберите пол</string>
+	<string name="gender_selector_screen_male">Мужской</string>
+	<string name="gender_selector_screen_female">Женский</string>
+
+	<string name="common_text_input_phone_number_title">Телефон</string>
+	<string name="common_text_input_phone_number_hint">+7 (ххх) ххх хх хх</string>
+	<string name="common_button_ok">OK</string>
+	<string name="common_button_cancel">Отмена</string>
+	<string name="common_button_yes">Да</string>
+	<string name="common_select_action">Выберите действие</string>
+	<string name="common_not_specified">Не указан</string>
+	<string name="common_unknown">Не указано</string>
+	<string name="common_two_lines">--</string>
+	<string name="common_change_save">Изменения сохранены</string>
+	<string name="common_ruble">₽</string>
+	<string name="common_plus">+</string>
+	<string name="common_minus">-</string>
+
+
+	<!-- Edit Parent Profile -->
+	<string name="edit_parent_profile_screen_name_title">Имя</string>
+	<string name="edit_parent_profile_screen_fio_title">ФИО</string>
+	<string name="edit_parent_profile_screen_address_title">Адрес</string>
+	<string name="edit_parent_profile_screen_name_hint">Например, Марина</string>
+	<string name="edit_parent_profile_screen_address_hint">Введите адрес</string>
+	<string name="edit_parent_profile_screen_last_name_title">Фамилия</string>
+	<string name="edit_parent_profile_screen_last_name_hint">Не указана</string>
+	<string name="edit_parent_profile_screen_birth_date_title">Дата рождения</string>
+	<string name="edit_parent_profile_screen_birth_date_hint">дд / мм / гггг</string>
+	<string name="edit_parent_profile_screen_gender_title">Пол</string>
+	<string name="edit_parent_profile_screen_gender_hint">Выберите пол</string>
+	<string name="edit_parent_profile_screen_email_title">E-mail</string>
+	<string name="edit_parent_profile_screen_email_hint">Не указан</string>
+	<string name="edit_parent_profile_screen_error_name_not_specified">Укажите имя</string>
+	<string name="edit_parent_profile_screen_phone_number_title">Телефон</string>
+	<string name="edit_parent_profile_screen_error_phone_number_not_specified">Укажите телефон</string>
+	<string name="edit_parent_profile_screen_error_address_not_specified">Укажите адрес</string>
+	<string name="edit_parent_profile_screen_error_email_not_specified">Укажите email</string>
+	<string name="edit_parent_profile_screen_menu_save">Сохранить изменения</string>
+	<string name="edit_parent_profile_screen_success_message">Профиль успешно изменен</string>
+
+	<!-- Main screen -->
+	<string name="bottom_navigation_user_data">Мои данные</string>
+	<string name="bottom_navigation_call">Список обращений</string>
+	<string name="relative_date_string_today">Сегодня</string>
+	<string name="relative_date_string_yesterday">Вчера</string>
+	<string name="parent_profile_settings_screen_logout">Выйти из аккаунта</string>
+
+    <!-- Сall -->
+	<string name="call_screen_selected_category">Выбранная категория</string>
+	<string name="call_screen_problem_description">Формулировка проблемы</string>
+	<string name="call_screen_send_request">Отправить обращение</string>
+	<string name="call_screen_empty_comment">Не заполнен текст обращения</string>
+	<string name="call_screen_empty_category">не выбрана категория</string>
+
+	<!-- Permissions -->
+	<string name="geolocation_permission_request_rationale">Приложению требуется доступ к вашему местоположению для отображения вашей позиции на карте</string>
+	<string name="input_text_screen_enter_text">Опишите проблему.</string>
+
+	<!-- Request list -->
+	<string name="request_list_screen_add_request">Добавить обращение</string>
+	<string name="request_list_screen_empty_list">Ваш список обращений пуст.</string>
+
+
+</resources>
+

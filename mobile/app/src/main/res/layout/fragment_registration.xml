@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<include layout="@layout/toolbar" />
+
+	<FrameLayout
+		android:id="@+id/content_container"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<ScrollView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:fillViewport="true"
+			android:scrollbars="none">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:clipToPadding="false"
+				android:orientation="vertical"
+				android:paddingLeft="@dimen/auth_screen_horizontal_padding"
+				android:paddingRight="@dimen/auth_screen_horizontal_padding">
+
+				<com.smartrequest.ui.widget.TitledInput
+					android:id="@+id/ti_name"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="8dp"
+					android:imeOptions="actionNext"
+					android:inputType="textCapWords|textPersonName"
+					app:hint="@string/registration_screen_name_hint"
+					app:title="@string/registration_screen_name_title"
+					tools:layout_height="48dp" />
+
+				<com.smartrequest.ui.widget.TitledInput
+					android:id="@+id/ti_address"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="16dp"
+					android:imeOptions="actionNext"
+					android:inputType="text"
+					app:hint="@string/registration_screen_address_hint"
+					app:title="@string/registration_screen_address_title"
+					tools:layout_height="40dp"
+					tools:layout_width="match_parent" />
+
+				<com.smartrequest.ui.widget.TitledInput
+					android:id="@+id/ti_email"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="14dp"
+					android:imeOptions="actionNext"
+					android:inputType="text|textEmailAddress"
+					app:hint="@string/registration_screen_email_hint"
+					app:title="@string/registration_screen_email_title"
+					tools:layout_height="40dp"
+					tools:layout_width="match_parent" />
+
+				<com.smartrequest.ui.widget.TitledInput
+					android:id="@+id/ti_phone_number"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="16dp"
+					android:imeOptions="actionNext"
+					android:inputType="phone"
+					app:hint="@string/common_text_input_phone_number_hint"
+					app:title="@string/common_text_input_phone_number_title"
+					tools:layout_height="40dp"
+					tools:layout_width="match_parent" />
+
+				<com.smartrequest.ui.widget.TitledInput
+					android:id="@+id/ti_password"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="16dp"
+					android:imeOptions="actionDone"
+					android:inputType="text|textPassword"
+					app:hint="@string/registration_screen_password_hint"
+					app:title="@string/registration_screen_password_title"
+					tools:layout_height="40dp"
+					tools:layout_width="match_parent" />
+
+				<TextView
+					android:id="@+id/btn_registration"
+					style="@style/PrimaryButton"
+					android:layout_marginTop="22dp"
+					android:text="@string/registration_screen_register" />
+
+
+				<View
+					android:id="@+id/spacer"
+					android:layout_width="match_parent"
+					android:layout_height="0dp"
+					android:layout_weight="1"
+					android:layout_marginTop="8dp"
+					android:layout_marginBottom="8dp" />
+
+				<TextView
+					android:id="@+id/btn_authorization"
+					style="@style/NormalRegularCharcoal"
+					android:layout_width="match_parent"
+					android:layout_marginTop="24dp"
+					android:layout_marginBottom="24dp"
+					android:gravity="center_horizontal"
+					android:text="@string/registration_screen_login"
+					android:textColorLink="@color/blue" />
+
+
+			</LinearLayout>
+
+		</ScrollView>
+
+	</FrameLayout>
+
+
+</LinearLayout>
