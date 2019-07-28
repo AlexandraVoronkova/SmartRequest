@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.conf.urls import url
 from smart_req import rest_views
 
@@ -26,7 +26,9 @@ urlpatterns = [
     url(r'^cats/(?P<cat_id>\d+)/$', view=rest_views.CategoryReqView.as_view(), name="categories_children_list"),
     url(r'^req/', view=rest_views.ReqCreateView.as_view(), name="req_post"),
     path('requests/', views.get_requests),
+    path('requests/<id_req>/', views.get_request),
     path('problems/', views.get_problems),
     path('templates/', views.get_templates),
-    path('templates/<template_id>/', views.edit_template)
+    path('templates/<template_id>/', views.edit_template),
+    path('smart_req/', include('smart_req.urls')),
 ]

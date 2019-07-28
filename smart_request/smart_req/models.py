@@ -15,7 +15,6 @@ class UserReq(models.Model):
         return self.surname + " " + self.name + " " + self.patronymic
 
 
-
 class ManagingOrganization(models.Model):
     _id = models.IntegerField(u"ID Управляющей организации на Портале", null=True, blank=True)
     subject_rf = models.CharField(u"Субъект РФ", max_length=200, default="")
@@ -39,10 +38,10 @@ class ManagingOrganization(models.Model):
 
 class SubjectStructure(models.Model):
     _id = models.IntegerField(u"ID дома на Портале", null=True, blank=True)
-    region_id = models.IntegerField(u"Субъект РФ (код ФИАС)", null=True, blank=True)
-    area_id = models.IntegerField(u"Район (код ФИАС)", null=True, blank=True)
-    city_id = models.IntegerField(u"Населенный пункт (код ФИАС)", null=True, blank=True)
-    street_id = models.IntegerField(u"Улица (код ФИАС)", null=True, blank=True)
+    region_id = models.CharField(u"Субъект РФ (код ФИАС)", max_length=200, default="")
+    area_id = models.CharField(u"Район (код ФИАС)", max_length=200, default="")
+    city_id = models.CharField(u"Населенный пункт (код ФИАС)",max_length=200, default="")
+    street_id = models.CharField(u"Улица (код ФИАС)", max_length=200, default="")
     shortname_region = models.CharField(u"Тип Субъекта РФ", max_length=200, default="")
     formalname_region = models.CharField(u"Субъект РФ", max_length=200, default="")
     shortname_area = models.CharField(u"Тип района", max_length=200, default="")
@@ -51,20 +50,18 @@ class SubjectStructure(models.Model):
     formalname_city = models.CharField(u"Населенный пункт", max_length=200, default="")
     shortname_street = models.CharField(u"Тип улицы", max_length=200, default="")
     formalname_street = models.CharField(u"Улица", max_length=200, default="")
-    house_number = models.IntegerField(u"Номер дома", null=True, blank=True)
-    building = models.IntegerField(u"Строение", null=True, blank=True)
-    block = models.IntegerField(u"Корпус", null=True, blank=True)
+    house_number = models.CharField(u"Номер дома", max_length=200, default="")
+    building = models.CharField(u"Строение", max_length=200, default="")
+    block = models.CharField(u"Корпус", max_length=200, default="")
     letter = models.CharField(u"Литера", max_length=200, default="")
     address = models.CharField(u"Адрес дома", max_length=200, default="")
-    houseguid = models.IntegerField(u"Глобальный уникальный идентификатор дома", null=True, blank=True)
+    houseguid = models.CharField(u"Глобальный уникальный идентификатор дома", max_length=200, default="")
     management_organization_id = models.ForeignKey(ManagingOrganization,
                                                    verbose_name=u"ID Управляющей организации на Портале", blank=True,
                                                    null=True, on_delete=models.CASCADE)
-    built_year = models.IntegerField(u"Год постройки", null=True, blank=True)
-    exploitation_start_year = models.IntegerField(u"Год ввода в эксплуатацию", null=True, blank=True)
     project_type = models.CharField(u"Серия, тип постройки здания", max_length=200, default="")
     house_type = models.CharField(u"Тип дома", max_length=200, default="")
-    is_alarm = models.NullBooleanField(u'Факт признания дома аварийным', blank=True)
+    is_alarm = models.CharField(u"Факт признания дома аварийным", max_length=200, default="")
 
 
 class CategoryReq(models.Model):
