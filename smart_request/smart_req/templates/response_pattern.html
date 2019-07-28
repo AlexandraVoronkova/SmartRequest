@@ -12,32 +12,28 @@
 
         <!-- Content Row -->
         <div class="row">
-            <select class="from-control"></select>
+            <div class="form-group col-12">
+                <label>Категория</label>
+                <select class="form-control">
+                    {% for category in categories %}
+                        <option value="{{ category.id }}">{{ category }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="row">
+
             <table class="tree table col-xs-12">
-                <th class="col-xs-4">Категория</th>
-                <th class="col-xs-4">Автор</th>
-                <th class="col-xs-2">Статус</th>
-                <th class="col-xs-2">Дата</th>
+                <th>Наименование</th>
+                <th>Дата последнего использования</th>
                 <th></th>
-                <tr class="treegrid-1">
-                    <td>Многоквартирные дома</td>
+                <tr>
+                    <td>Управляющая компания вашего дома устранила проблему</td>
+                    <td>28.07.2019</td>
                 </tr>
-                <tr class="treegrid-3 treegrid-parent-1">
-                    <td>Придомовая территория</td>
-                </tr>
-                <tr class="treegrid-4 treegrid-parent-3">
-                    <td>Некачественная уборка снега</td>
-                    <td>Сидоров Николай Петрович</td>
-                    <td>На расмотрении</td>
-                    <td>21.04.2019</td>
-                    <th><input type="checkbox"></th>
-                </tr>
-                <tr class="treegrid-4 treegrid-parent-3">
-                    <td>Node 1-2-1</td>
-                    <td>Additional info</td>
-                </tr>
-                <tr class="treegrid-2">
-                    <td>Частный сектор</td>
+                <tr>
+                    <td>Необходимо написать письмо в управляющую компанию от совета МКД</td>
+                    <td>27.07.2019</td>
                 </tr>
             </table>
 

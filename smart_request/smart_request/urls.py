@@ -27,5 +27,6 @@ urlpatterns = [
     url(r'^req/', view=rest_views.ReqCreateView.as_view(), name="req_post"),
     path('requests/', views.get_requests),
     path('problems/', views.get_problems),
-    path('templates/', views.get_templates)
+    path('templates/', views.get_templates),
+    path('templates/<template_id>/', views.edit_template)
 ]

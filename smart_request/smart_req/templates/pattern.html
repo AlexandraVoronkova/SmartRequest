@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Редактор шаблонов ответа</h1>
+        </div>
+        <div class="row">
+            <button class="btn btn-outline-primary" onclick="add_field('{ФИО адресата}')">ФИО адресата</button>
+            <button class="btn btn-outline-primary" onclick="add_field('{Адрес адресата}')">Адрес адресата</button>
+            <button class="btn btn-outline-primary" onclick="add_field('{Обращение}')">Обращение</button>
+            <button class="btn btn-outline-primary" onclick="add_field('{Наименование управляющей компании}')">
+                Наименование управляющей компании
+            </button>
+            <button class="btn btn-outline-primary" onclick="add_field('{Адрес управляющей компании}')">Адрес
+                управляющей компании
+            </button>
+            <button class="btn btn-outline-primary" onclick="add_field('{Текущая дата}')">Текущая дата</button>
+        </div>
+
+        <div class="row">
+            <textarea id="editor" placeholder="Введите текст ответа" autofocus>
+                Уважаемый(ая) {ФИО адресата}! Департаментом городского хозяйства рассмотрено Ваше обращение по вопросу {Обращение} по адресу {Адрес адресата}. Сообщаем, что {Наименование управляющей компании} устранила проблему.
+            </textarea>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <button class="btn btn-success">Сохранить</button>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container-fluid -->
+{% endblock %}
+{% block scripts %}
+    <script src="/static/js/trumbowyg.js"></script>
+    <script>
+        $('#editor').trumbowyg();
+
+        function add_field(field) {
+            $('#editor').trumbowyg('execCmd', {
+                cmd: 'insertText',
+                param: field,
+                forceCss: false,
+            });
+        }
+    </script>
+{% endblock %}
