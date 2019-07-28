@@ -15,7 +15,6 @@ class UserReq(models.Model):
         return self.surname + " " + self.name + " " + self.patronymic
 
 
-
 class ManagingOrganization(models.Model):
     _id = models.IntegerField(u"ID Управляющей организации на Портале", null=True, blank=True)
     subject_rf = models.CharField(u"Субъект РФ", max_length=200, default="")

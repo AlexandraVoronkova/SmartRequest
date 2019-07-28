@@ -26,7 +26,8 @@ urlpatterns = [
     url(r'^cats/(?P<cat_id>\d+)/$', view=rest_views.CategoryReqView.as_view(), name="categories_children_list"),
     url(r'^req/', view=rest_views.ReqCreateView.as_view(), name="req_post"),
     path('requests/', views.get_requests),
+    path('requests/<id_req>/', views.get_request),
     path('problems/', views.get_problems),
-    path('templates/', views.get_templates)
-    path('smart_req/', include('smart_req.urls'))
+    path('templates/', views.get_templates),
+    path('smart_req/', include('smart_req.urls')),
 ]
