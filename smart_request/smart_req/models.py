@@ -40,7 +40,7 @@ class SubjectStructure(models.Model):
     _id = models.IntegerField(u"ID дома на Портале", null=True, blank=True)
     region_id = models.CharField(u"Субъект РФ (код ФИАС)", max_length=200, default="")
     area_id = models.CharField(u"Район (код ФИАС)", max_length=200, default="")
-    city_id = models.CharField(u"Населенный пункт (код ФИАС)",max_length=200, default="")
+    city_id = models.CharField(u"Населенный пункт (код ФИАС)", max_length=200, default="")
     street_id = models.CharField(u"Улица (код ФИАС)", max_length=200, default="")
     shortname_region = models.CharField(u"Тип Субъекта РФ", max_length=200, default="")
     formalname_region = models.CharField(u"Субъект РФ", max_length=200, default="")
@@ -72,13 +72,23 @@ class CategoryReq(models.Model):
         return self.name
 
 
+class Problem(models.Model):
+    cat = models.ForeignKey(CategoryReq, on_delete=models.CASCADE)
+    address_fias = models.CharField(max_length=100, null=True, blank=True)
+    address_text = models.CharField(max_length=100, null=True, blank=True)
+
+
 class Request(models.Model):
-    STATUS_CHOICES = ((1, 'В обработке'),
+    STATUS_CHOICES = ((0, 'Не рассмотрено'),
+                      (1, 'В обработке'),
                       (2, 'В работе'),
                       (3, 'На доработке'),
                       (4, 'Выполнена'))
     user_req = models.ForeignKey(UserReq, verbose_name=u"UserInfo", blank=True, null=True, on_delete=models.CASCADE)
     cat = models.ForeignKey(CategoryReq, verbose_name=u"CategoryInfo", blank=True, null=True, on_delete=models.CASCADE)
-    status = models.CharField(default=1, max_length=200, choices=STATUS_CHOICES, null=True, blank=True)
+    status = models.IntegerField(default=1, max_length=200, choices=STATUS_CHOICES, null=True, blank=True)
     text = models.CharField(u"Текст запроса", max_length=1000, default="")
     date_req = models.DateField(u"Время последнего изменения заявки", null=True, blank=True, auto_now_add=True)
+    address_fias = models.CharField(max_length=100, null=True, blank=True)
+    address_text = models.CharField(max_length=100, null=True, blank=True)
+    problem = models.ForeignKey(Problem, on_delete=models.CASCADE, null=True, blank=True)

@@ -1,10 +1,11 @@
-from django.shortcuts import render
-from smart_req.models import Request
+from django.shortcuts import render, redirect
+from smart_req.models import Request, Problem
 
 
 # Create your views here.
 def get_requests(request):
-    return render(request, 'requests_main.html')
+    req = Request.objects.all().first()
+    return render(request, 'requests_main.html', dict(req=req))
 
 
 def get_request(request, id_req):
@@ -14,6 +15,14 @@ def get_request(request, id_req):
 
 def get_problems(request):
     return render(request, 'problems.html')
+
+
+def new_problem(request, req_id):
+    req = Request.objects.get(id=req_id)
+    problem = Problem.objects.create(cat=req.cat, address_fias=req.address_fias, address_text=req.address_text)
+    req.problem = problem
+    req.save()
+    return redirect('/problems/')
 
 
 def get_templates(request):

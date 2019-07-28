@@ -28,6 +28,7 @@ urlpatterns = [
     path('requests/', views.get_requests),
     path('requests/<id_req>/', views.get_request),
     path('problems/', views.get_problems),
+    path('problems/new/<req_id>', views.new_problem),
     path('templates/', views.get_templates),
     path('templates/<template_id>/', views.edit_template),
     path('analyzer/', views.get_analitics),
