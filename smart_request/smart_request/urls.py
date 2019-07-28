@@ -31,5 +31,6 @@ urlpatterns = [
     path('problems/new/<req_id>', views.new_problem),
     path('templates/', views.get_templates),
     path('templates/<template_id>/', views.edit_template),
+    path('analyzer/', views.get_analitics),
     path('smart_req/', include('smart_req.urls')),
 ]

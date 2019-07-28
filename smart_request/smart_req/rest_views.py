@@ -3,6 +3,7 @@ from rest_framework import generics
 from .models import *
 from rest_framework.response import Response
 from rest_framework import status
+from djantimat.helpers import PymorphyProc
 
 
 class CategoryReqListView(generics.ListAPIView):
@@ -28,6 +29,9 @@ class ReqCreateView(generics.CreateAPIView):
         serializer = ReqSerializer(data=data)
 
         if serializer.is_valid():
+            slang_detected = PymorphyProc.test(serializer)
+            if slang_detected > 0:
+                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
