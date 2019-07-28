@@ -29,7 +29,7 @@ class ReqCreateView(generics.CreateAPIView):
         serializer = ReqSerializer(data=data)
 
         if serializer.is_valid():
-            slang_detected = PymorphyProc.test(serializer)
+            slang_detected = PymorphyProc.test(data.text)
             if slang_detected > 0:
                 return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
             serializer.save()
