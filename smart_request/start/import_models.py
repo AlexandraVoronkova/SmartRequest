@@ -16,13 +16,14 @@ def import_subject_structure(filename, ModelsDict):
                 if key == 'id':
                     obj._id = row[key]
                 elif key == 'management_organization_id':
-                    obj.management_organization_id = ManagingOrganization.objects.filter(_id=row[key]).first()
+                    if row[key]:
+                        obj.management_organization_id = ManagingOrganization.objects.filter(_id=row[key]).first()
                 else:
                     setattr(obj, key, row[key])
             obj.save()
 
 
 def import_all(request):
-    import_subject_structure('export-reestruo-00-20190701.csv', ManagingOrganization)
+    import_subject_structure('kursk.csv', ManagingOrganization)
     import_subject_structure('export-reestrmkd-46-20190701.csv', SubjectStructure)
 
