@@ -1,0 +1,72 @@
+{
+  "project_info": {
+    "project_number": "1084188943772",
+    "project_id": "smart-request-dev",
+    "storage_bucket": "smart-request-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1084188943772:android:1db4341e95aa1169",
+        "android_client_info": {
+          "package_name": "com.smartrequest.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1084188943772-nied8m3ek230u7rmce1u6kqovh20sj3k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAa7LH_a6Xe8X27EcfLlnqFZaGRBgX2Sm8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1084188943772:android:e411b875690a0db3",
+        "android_client_info": {
+          "package_name": "org.gkulabukhov.jetpushtest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1084188943772-nied8m3ek230u7rmce1u6kqovh20sj3k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAa7LH_a6Xe8X27EcfLlnqFZaGRBgX2Sm8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

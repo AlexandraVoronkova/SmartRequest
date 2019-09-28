@@ -1,0 +1,11 @@
+<resources>
+	<declare-styleable name="UnderlinedTitledInput">
+		<attr name="uti_title" format="string" />
+		<attr name="uti_hint" format="string" />
+
+		<!-- standart attributes, note android: prefix and no format attribute -->
+		<attr name="android:imeOptions" />
+		<attr name="android:inputType" />
+
+	</declare-styleable>
+</resources>

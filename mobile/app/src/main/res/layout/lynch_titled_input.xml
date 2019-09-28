@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools">
+
+	<TextView
+		android:id="@+id/tv_title"
+		style="@style/xSmallRegularLynch"
+		android:layout_marginTop="8dp"
+		android:labelFor="@id/et_text"
+		tools:text="Title" />
+
+	<EditText
+		android:id="@+id/et_text"
+		style="@style/NormalRegularCharcoal"
+		android:layout_width="match_parent"
+		android:layout_marginBottom="6dp"
+		android:background="@color/transparent"
+		android:inputType="text"
+		android:textColorHint="@color/charcoal_50_percent_transparent"
+		tools:text="Value" />
+
+</merge>

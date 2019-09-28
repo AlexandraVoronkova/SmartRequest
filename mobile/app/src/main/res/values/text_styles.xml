@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<style name="BaseTextStyle" parent="android:Widget.TextView">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+	</style>
+
+	<!-- Text with sizes-->
+
+
+	<style name="xSmall" parent="BaseTextStyle">
+		<item name="android:textSize">@dimen/text_size_xsmall</item>
+	</style>
+
+	<style name="Small" parent="BaseTextStyle">
+		<item name="android:textSize">@dimen/text_size_small</item>
+	</style>
+
+	<style name="Normal" parent="BaseTextStyle">
+		<item name="android:textSize">@dimen/text_size_normal</item>
+	</style>
+
+	<style name="Large" parent="BaseTextStyle">
+		<item name="android:textSize">@dimen/text_size_large</item>
+	</style>
+
+	<style name="xLarge" parent="BaseTextStyle">
+		<item name="android:textSize">@dimen/text_size_xlarge</item>
+	</style>
+
+	<!--Text with fonts-->
+
+	<style name="xSmallLight" parent="xSmall">
+		<item name="android:fontFamily">@font/pfdin_display_pro_light</item>
+	</style>
+
+	<style name="xSmallRegular" parent="xSmall">
+		<item name="android:fontFamily">@font/pfdin_display_pro_regular</item>
+	</style>
+
+	<style name="xSmallMedium" parent="xSmall">
+		<item name="android:fontFamily">@font/pfdin_display_pro_medium</item>
+	</style>
+
+	<style name="SmallRegular" parent="Small">
+		<item name="android:fontFamily">@font/pfdin_display_pro_regular</item>
+	</style>
+
+	<style name="SmallMedium" parent="Small">
+		<item name="android:fontFamily">@font/pfdin_display_pro_medium</item>
+	</style>
+
+	<style name="SmallBold" parent="Small">
+		<item name="android:fontFamily">@font/pfdin_display_pro_bold</item>
+	</style>
+
+	<style name="NormalLight" parent="Normal">
+		<item name="android:fontFamily">@font/pfdin_display_pro_light</item>
+	</style>
+
+	<style name="NormalRegular" parent="Normal">
+		<item name="android:fontFamily">@font/pfdin_display_pro_regular</item>
+	</style>
+
+	<style name="NormalMedium" parent="Normal">
+		<item name="android:fontFamily">@font/pfdin_display_pro_medium</item>
+	</style>
+
+	<style name="NormalBold" parent="Normal">
+		<item name="android:fontFamily">@font/pfdin_display_pro_bold</item>
+	</style>
+
+	<style name="LargeRegular" parent="Large">
+		<item name="android:fontFamily">@font/pfdin_display_pro_regular</item>
+	</style>
+
+	<style name="LargeMedium" parent="Large">
+		<item name="android:fontFamily">@font/pfdin_display_pro_medium</item>
+	</style>
+
+	<style name="xLargeLight" parent="xLarge">
+		<item name="android:fontFamily">@font/pfdin_display_pro_light</item>
+	</style>
+
+	<style name="xLargeRegular" parent="xLarge">
+		<item name="android:fontFamily">@font/pfdin_display_pro_regular</item>
+	</style>
+
+	<style name="xLargeBold" parent="xLarge">
+		<item name="android:fontFamily">@font/pfdin_display_pro_bold</item>
+	</style>
+
+	<!-- Texts with colors -->
+
+	<style name="xSmallLightCoralRed" parent="xSmallLight">
+		<item name="android:textColor">@color/coral_red</item>
+	</style>
+
+	<style name="xSmallRegularWhite" parent="xSmallRegular">
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="xSmallRegularWhite70Transparent" parent="xSmallRegular">
+		<item name="android:textColor">@color/white_70_percent_transparent</item>
+	</style>
+
+	<style name="xSmallRegularLynch" parent="xSmallRegular">
+		<item name="android:textColor">@color/lynch</item>
+	</style>
+
+	<style name="xSmallMediumCharcoal" parent="xSmallMedium">
+		<item name="android:textColor">@color/charcoal</item>
+	</style>
+
+	<style name="xSmallMediumBlueGrey" parent="xSmallMedium">
+		<item name="android:textColor">@color/blue_grey</item>
+	</style>
+
+	<style name="xSmallMediumBoulder" parent="xSmallMedium">
+		<item name="android:textColor">@color/boulder</item>
+	</style>
+
+	<style name="SmallRegularWhite" parent="SmallRegular">
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="SmallRegularCharcoal" parent="SmallRegular">
+		<item name="android:textColor">@color/charcoal</item>
+	</style>
+
+	<style name="SmallRegularLynch" parent="SmallRegular">
+		<item name="android:textColor">@color/lynch</item>
+	</style>
+
+	<style name="SmallRegularBoulder" parent="SmallRegular">
+		<item name="android:textColor">@color/boulder</item>
+	</style>
+
+	<style name="SmallRegularCharcoal50Transparent" parent="SmallRegular">
+		<item name="android:textColor">@color/charcoal_50_percent_transparent</item>
+	</style>
+
+	<style name="SmallRegularCinder" parent="SmallRegular">
+		<item name="android:textColor">@color/cinder</item>
+	</style>
+
+	<style name="SmallRegularBlack" parent="SmallRegular">
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="SmallMediumWhite" parent="SmallMedium">
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="SmallMediumCoralRed" parent="SmallMedium">
+		<item name="android:textColor">@color/coral_red</item>
+	</style>
+
+	<style name="SmallMediumLynch" parent="SmallMedium">
+		<item name="android:textColor">@color/lynch</item>
+	</style>
+
+	<style name="SmallBoldCoralRed" parent="SmallBold">
+		<item name="android:textColor">@color/coral_red</item>
+	</style>
+
+	<style name="SmallBoldCharcoal" parent="SmallBold">
+		<item name="android:textColor">@color/charcoal</item>
+	</style>
+
+	<style name="NormalLightWhite" parent="NormalLight">
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="NormalLightCharcoal" parent="NormalLight">
+		<item name="android:textColor">@color/charcoal</item>
+	</style>
+
+	<style name="NormalLightBoulder" parent="NormalLight">
+		<item name="android:textColor">@color/boulder</item>
+	</style>
+
+	<style name="NormalRegularWhite" parent="NormalRegular">
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="NormalRegularCoralRed" parent="NormalRegular">
+		<item name="android:textColor">@color/coral_red</item>
+	</style>
+
+	<style name="NormalRegularCharcoal" parent="NormalRegular">
+		<item name="android:textColor">@color/charcoal</item>
+	</style>
+
+	<style name="NormalRegularLynch" parent="NormalRegular">
+		<item name="android:textColor">@color/lynch</item>
+	</style>
+
+	<style name="NormalRegularBlack" parent="NormalRegular">
+		<item name="android:textColor">@color/black</item>
+	</style>
+
+	<style name="NormalRegularBlueGrey70Transparent" parent="NormalRegular">
+		<item name="android:textColor">@color/blue_grey_70_percent_transparent</item>
+	</style>
+
+	<style name="NormalMediumWhite" parent="NormalMedium">
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="NormalMediumCoralRed" parent="NormalMedium">
+		<item name="android:textColor">@color/coral_red</item>
+	</style>
+
+	<style name="NormalMediumCharcoal" parent="NormalMedium">
+		<item name="android:textColor">@color/charcoal</item>
+	</style>
+
+	<style name="NormalBoldCharcoal" parent="NormalBold">
+		<item name="android:textColor">@color/charcoal</item>
+	</style>
+
+	<style name="NormalBoldWhite" parent="NormalBold">
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="NormalBoldGreen" parent="NormalBold">
+		<item name="android:textColor">@color/lime_green</item>
+	</style>
+
+	<style name="LargeRegularCharcoal" parent="LargeRegular">
+		<item name="android:textColor">@color/charcoal</item>
+	</style>
+
+	<style name="LargeRegularWhite" parent="LargeRegular">
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="LargeMediumCharcoal" parent="LargeMedium">
+		<item name="android:textColor">@color/charcoal</item>
+	</style>
+
+	<style name="xLargeLightCharcoal" parent="xLargeLight">
+		<item name="android:textColor">@color/charcoal</item>
+	</style>
+
+	<style name="xLargeRegularWhite" parent="xLargeRegular">
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="xLargeRegularCharcoal" parent="xLargeRegular">
+		<item name="android:textColor">@color/charcoal</item>
+	</style>
+
+	<style name="xLargeRegularCoralRed" parent="xLargeRegular">
+		<item name="android:textColor">@color/coral_red</item>
+	</style>
+
+	<style name="xLargeBoldCharcoal" parent="xLargeBold">
+		<item name="android:textColor">@color/charcoal</item>
+	</style>
+
+	<style name="xLargeBoldCoralRed" parent="xLargeBold">
+		<item name="android:textColor">@color/coral_red</item>
+	</style>
+
+</resources>

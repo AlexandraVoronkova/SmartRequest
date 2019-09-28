@@ -1,0 +1,142 @@
+questions:
+  - {key: appPackageName,
+    text: "Enter App package name (eg. com.yourcompany.app): ",
+    required: true}
+
+  - {key: appPackagePath,
+    text: "Enter App package path (eg. com/yourcompany/app): ",
+    required: true}
+
+  - {key: fibricApiKey,
+    text: "Enter Fabric API key: ",
+    required: true}
+
+  - {key: fibricApiSecret,
+    text: "Enter Fabric API secret: ",
+    required: true}
+    
+
+code_files: 
+  - {name: "AppContext.kt",
+    template_path: app/src/main/java/com/yourcompany/app/components/AppContext.kt,
+    output_path: "app/src/main/java/{{.answers.appPackagePath}}/components"}
+
+  - {name: "AppComponent.kt",
+    template_path: app/src/main/java/com/yourcompany/app/di/AppComponent.kt,
+    output_path: "app/src/main/java/{{.answers.appPackagePath}}/di"}
+
+  - {name: "AppModule.kt",
+    template_path: app/src/main/java/com/yourcompany/app/di/AppModule.kt,
+    output_path: "app/src/main/java/{{.answers.appPackagePath}}/di"}
+
+  - {name: "NavigationModule.kt",
+    template_path: app/src/main/java/com/yourcompany/app/di/NavigationModule.kt,
+    output_path: "app/src/main/java/{{.answers.appPackagePath}}/di"}
+
+  - {name: "LocalNavigationModule.kt",
+    template_path: app/src/main/java/com/yourcompany/app/di/LocalNavigationModule.kt,
+    output_path: "app/src/main/java/{{.answers.appPackagePath}}/di"}
+
+  - {name: "BackButtonListener.kt",
+    template_path: app/src/main/java/com/yourcompany/app/ui/navigation/BackButtonListener.kt,
+    output_path: "app/src/main/java/{{.answers.appPackagePath}}/ui/navigation"}
+
+  - {name: "LocalCiceroneHolder.kt",
+    template_path: app/src/main/java/com/yourcompany/app/ui/navigation/LocalCiceroneHolder.kt,
+    output_path: "app/src/main/java/{{.answers.appPackagePath}}/ui/navigation"}
+
+  - {name: "RouterProvider.kt",
+    template_path: app/src/main/java/com/yourcompany/app/ui/navigation/RouterProvider.kt,
+    output_path: "app/src/main/java/{{.answers.appPackagePath}}/ui/navigation"}
+
+  - {name: "Screens.kt",
+    template_path: app/src/main/java/com/yourcompany/app/ui/navigation/Screens.kt,
+    output_path: "app/src/main/java/{{.answers.appPackagePath}}/ui/navigation"}
+
+  - {name: "ApplicationNavigator.kt",
+    template_path: app/src/main/java/com/yourcompany/app/ui/navigation/ApplicationNavigator.kt,
+    output_path: "app/src/main/java/{{.answers.appPackagePath}}/ui/navigation"}
+
+  - {name: "ListItemClickListener.kt",
+    template_path: app/src/main/java/com/yourcompany/app/ui/adapter/listener/ListItemClickListener.kt,
+    output_path: "app/src/main/java/{{.answers.appPackagePath}}/ui/adapter/listener"}
+
+  - {name: "BaseAdapter.kt",
+    template_path: app/src/main/java/com/yourcompany/app/ui/adapter/BaseAdapter.kt,
+    output_path: "app/src/main/java/{{.answers.appPackagePath}}/ui/adapter"}
+
+  - {name: "DiffAdapter.kt",
+    template_path: app/src/main/java/com/yourcompany/app/ui/adapter/DiffAdapter.kt,
+    output_path: "app/src/main/java/{{.answers.appPackagePath}}/ui/adapter"}
+
+  - {name: "ListViewModel.kt",
+    template_path: app/src/main/java/com/yourcompany/app/ui/adapter/ListViewModel.kt,
+    output_path: "app/src/main/java/{{.answers.appPackagePath}}/ui/adapter"}
+
+  - {name: "ListViewModelDiffCallback.kt",
+    template_path: app/src/main/java/com/yourcompany/app/ui/adapter/ListViewModelDiffCallback.kt,
+    output_path: "app/src/main/java/{{.answers.appPackagePath}}/ui/adapter"}
+
+  - {name: "KeyboardHelper.kt",
+    template_path: app/src/main/java/com/yourcompany/app/helpers/KeyboardHelper.kt,
+    output_path: "app/src/main/java/{{.answers.appPackagePath}}/helpers"}
+
+  - {name: "DimensHelper.kt",
+    template_path: app/src/main/java/com/yourcompany/app/helpers/DimensHelper.kt,
+    output_path: "app/src/main/java/{{.answers.appPackagePath}}/helpers"}
+
+  - {name: "BaseActivity.kt",
+    template_path: app/src/main/java/com/yourcompany/app/ui/activity/base/BaseActivity.kt,
+    output_path: "app/src/main/java/{{.answers.appPackagePath}}/ui/activity/base"}
+
+  - {name: "MainActivity.kt",
+    template_path: app/src/main/java/com/yourcompany/app/ui/activity/MainActivity.kt,
+    output_path: "app/src/main/java/{{.answers.appPackagePath}}/ui/activity"}
+
+  - {name: "BaseFragment.kt",
+    template_path: app/src/main/java/com/yourcompany/app/ui/fragment/base/BaseFragment.kt,
+    output_path: "app/src/main/java/{{.answers.appPackagePath}}/ui/fragment/base"}
+
+  - {name: "ExampleInstrumentedTest.kt",
+    template_path: app/src/androidTest/java/com/yourcompany/app/ExampleInstrumentedTest.kt,
+    output_path: "app/src/androidTest/java/{{.answers.appPackagePath}}"}
+
+  - {name: "ExampleUnitTest.kt",
+    template_path: app/src/test/java/com/yourcompany/app/ExampleUnitTest.kt,
+    output_path: "app/src/test/java/{{.answers.appPackagePath}}"}
+
+  - {name: "styles.xml",
+    template_path: app/src/main/res/values/styles.xml,
+    output_path: "app/src/main/res/values"}
+
+  - {name: "AndroidManifest.xml",
+    template_path: app/src/main/AndroidManifest.xml,
+    output_path: "app/src/main"}
+
+  - {name: "build.gradle",
+    template_path: app/build.gradle,
+    output_path: "app"}
+
+  - {name: "fabric.properties",
+    template_path: app/fabric.properties,
+    output_path: "app"}
+
+  - {name: "proguard-rules.pro",
+    template_path: app/proguard-rules.pro,
+    output_path: "app"}
+
+  - {name: "Appfile",
+    template_path: fastlane/Appfile,
+    output_path: "fastlane"}
+
+  - {name: "Fastfile",
+    template_path: fastlane/Fastfile,
+    output_path: "fastlane"}
+
+  - {name: "README.md",
+    template_path: fastlane/README.md,
+    output_path: "fastlane"}
+
+  - {name: "build.gradle",
+    template_path: build.gradle,
+    output_path: "."}

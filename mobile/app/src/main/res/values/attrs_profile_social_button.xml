@@ -1,0 +1,6 @@
+<resources>
+	<declare-styleable name="ProfileSocialButton">
+		<attr name="psb_social" format="string" />
+		<attr name="psb_icon" format="integer" />
+	</declare-styleable>
+</resources>

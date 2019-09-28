@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+	<dimen name="content_horizontal_padding">16dp</dimen>
+	<dimen name="content_large_horizontal_padding">24dp</dimen>
+	<dimen name="content_vertical_padding">8dp</dimen>
+	<dimen name="narrow_letter_spacing">-0.04</dimen>
+
+	<dimen name="auth_screen_horizontal_padding">20dp</dimen>
+
+	<dimen name="toolbar_elevation">3dp</dimen>
+
+	<dimen name="text_size_xsmall">12dp</dimen>
+	<dimen name="text_size_small">14dp</dimen>
+	<dimen name="text_size_normal">16dp</dimen>
+	<dimen name="text_size_large">18dp</dimen>
+	<dimen name="text_size_xlarge">24dp</dimen>
+
+	<dimen name="design_bottom_navigation_text_size" tools:override="true">10dp</dimen>
+	<dimen name="design_bottom_navigation_active_text_size" tools:override="true">11dp</dimen>
+
+	<dimen name="device_pager_height">200dp</dimen>
+	<dimen name="device_card_corner_radius">2dp</dimen>
+	<dimen name="device_card_elevation">6dp</dimen>
+	<dimen name="card_elevation">3dp</dimen>
+
+	<dimen name="map_button_size">44dp</dimen>
+	<dimen name="map_button_elevation">8dp</dimen>
+	<dimen name="map_buttons_bottom_offset">192dp</dimen>
+
+	<dimen name="safe_area_editor_panel_height">48dp</dimen>
+
+	<dimen name="titled_input_horizontal_height">46dp</dimen>
+
+	<dimen name="notification_list_item_avatar_size">40dp</dimen>
+
+	<dimen name="messages_users_right_margin">12dp</dimen>
+	<dimen name="messages_others_distance_from_profie_pic">20dp</dimen>
+	<dimen name="messages_separator_single_persons">2dp</dimen>
+	<dimen name="messages_separator_short_talk">10dp</dimen>
+	<dimen name="messages_separator_long_talk">28dp</dimen>
+	<dimen name="messages_separator_titled">0dp</dimen>
+
+	<dimen name="notification_list_item_remote_photo_radius">7dp</dimen>
+	<dimen name="chat_message_corner_radius">10dp</dimen>
+
+</resources>

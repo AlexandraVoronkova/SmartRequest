@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<item name="up_screen_message_id" type="id" />
+	<item name="wake_lock_tag" type="string" />
+
+</resources>

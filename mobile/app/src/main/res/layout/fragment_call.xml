@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<include layout="@layout/toolbar" />
+
+	<FrameLayout
+		android:id="@+id/content_container"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:focusableInTouchMode="true">
+
+		<android.support.v4.widget.NestedScrollView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:fillViewport="true"
+			android:scrollbars="none">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="@dimen/content_horizontal_padding"
+					android:layout_marginTop="24dp"
+					android:layout_marginRight="@dimen/content_horizontal_padding"
+					android:orientation="vertical"
+					android:paddingBottom="24dp">
+
+					<com.smartrequest.ui.widget.VerticallyTitledValue
+						android:id="@+id/vtv_category"
+						style="@style/UnderlinedTextInput"
+						android:layout_marginTop="1dp"
+						app:vtv_title="@string/call_screen_selected_category" />
+
+					<com.smartrequest.ui.widget.VerticallyTitledValue
+						android:id="@+id/vtv_comment"
+						style="@style/UnderlinedTextInput"
+						android:layout_marginTop="1dp"
+						app:vtv_title="@string/call_screen_problem_description" />
+
+                    <TextView
+                        android:id="@+id/btn_send"
+                        style="@style/PrimaryButton"
+                        android:layout_marginTop="24dp"
+                        android:text="@string/call_screen_send_request" />
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+		</android.support.v4.widget.NestedScrollView>
+
+	</FrameLayout>
+
+</LinearLayout>
