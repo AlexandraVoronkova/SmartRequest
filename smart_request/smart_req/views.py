@@ -17,11 +17,11 @@ def get_problems(request):
     return render(request, 'problems.html')
 
 
-def new_problem(request, req_id):
-    req = Request.objects.get(id=req_id)
-    problem = Problem.objects.create(cat=req.cat, address_fias=req.address_fias, address_text=req.address_text)
-    req.problem = problem
-    req.save()
+def new_problem(request):
+    # req = Request.objects.get(id=req_id)
+    # problem = Problem.objects.create(cat=req.cat, address_fias=req.address_fias, address_text=req.address_text)
+    # req.problem = problem
+    # req.save()
     return redirect('/problems/')
 
 
